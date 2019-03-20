@@ -10,7 +10,7 @@
     public $form_attempts = 1;
     public $content;
     public $WebAddr;
-    public $method = 'POST';
+    public $method = 'POST'; 
     public $timeout = 3600;
     public $max_redirects = 20;
     public $cookie = 'foo=bar';
@@ -38,10 +38,8 @@
     
       if ($Options and is_array($Options) ) { 
 
-         foreach ($Options as $option => $value) {
-            if (true) {
-               $this->$option = $value;
-            }
+         foreach ($Options as $option => $value) { 
+            $this->$option = $value; 
          } 			
       }
 
