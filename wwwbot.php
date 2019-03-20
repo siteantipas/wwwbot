@@ -119,11 +119,11 @@
           }
       }
       $emails = array_filter($emails); # Removing empty emails
-      $this->FoundEmails = implode($this->separator, $emails);
-      
-      if( count($this->FoundEmails) > 0 ) {
+      $this->FoundEmails = implode($this->separator, $emails); 
+
+      if( !empty($this->FoundEmails) and @count($this->FoundEmails) > 0 ) {
          # Display results for page containing emails found
-         ?>
+         ?> 
          <h3>
            On the page: <a href="<?php print $this->WebAddr ?>" target="_blank"> <?php print $this->WebAddr ?></a>, I found these emails
          </h3>
@@ -299,7 +299,7 @@
 
 		 $AllTagsAttrValue = @implode( $this->separator , $Attr_Values );
 
-		 if ( count($AllTagsAttrValue > 0 ) ) :
+		 if ( !empty($AllTagsAttrValue) and @count($AllTagsAttrValue > 0 ) ) :
 
 			 return $AllTagsAttrValue;
 		 else :
@@ -358,6 +358,6 @@
  	}		
 
 }
-
+  
 
 ?>
